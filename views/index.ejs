@@ -1,0 +1,26 @@
+
+<%- include('./templates/head')  %>     
+
+<%- include('./templates/nav')  %> 
+
+
+<section class="card">
+
+    <% entries.forEach(element => { %>
+        <article>
+            <h2><%= element.title%></h2> 
+            <h3><%= element.stract %></h3>  
+            <img src="<%= element.image %>" alt="">
+           <a href="http://localhost:4000/detalles/<%= element._id %>"> Entrada completa</a>
+        </article>
+        <br>
+        <br>
+        <br>
+    <% }) %>
+</section>
+
+<div id="botones"></div>
+
+
+
+<%- include('./templates/footer')  %> 
